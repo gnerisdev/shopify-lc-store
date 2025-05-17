@@ -1,0 +1,175 @@
+{
+  "sections": {
+    "slideshow_aFLYYT": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_GyqNch": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "image_overlay_opacity": 0,
+            "heading": "Slide de imagem",
+            "heading_size": "h1",
+            "subheading": "Conte a história de sua marca com vídeos e imagens",
+            "button_label": "Etiqueta de botão",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": true,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_JMWxEn": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-slide-1739283668004-5536409253-489c0b7a0e797de636fbf652966ce7951739283794-1920-1920.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_6arYYB": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-slide-1741218521493-3990046210-b74f7585507fc082f06d1308cd31d9231741218522-1920-1920.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": "scheme-1"
+          }
+        },
+        "slide_hbAMtL": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1-slide-1729808486921-6263927290-fc1bbec1d0c9e8842f222ca2bed5c2261729808734-1920-1920.png",
+            "image_overlay_opacity": 0,
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "Conte a história de sua marca com vídeos e imagen",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "show_text_box": false,
+            "box_align": "middle-center",
+            "text_alignment": "center",
+            "text_alignment_mobile": "center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_GyqNch",
+        "slide_JMWxEn",
+        "slide_6arYYB",
+        "slide_hbAMtL"
+      ],
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Apresentação de slides sobre nossa marca"
+      }
+    },
+    "custom_liquid_grbdP7": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<section class=\"section-informative--desktop\">\n  <div class=\"page-width\">\n    <div class=\"content\">\n      <article>\n          <svg id=\"credit-card-circle\" viewBox=\"0 0 51 51\"><path d=\"M25.5,51A25.5,25.5,0,1,1,51,25.5,25.53,25.53,0,0,1,25.5,51Zm0-50A24.5,24.5,0,1,0,50,25.5,24.53,24.53,0,0,0,25.5,1Zm10,35h-20A3.5,3.5,0,0,1,12,32.5v-13A3.5,3.5,0,0,1,15.5,16h20A3.5,3.5,0,0,1,39,19.5v13A3.5,3.5,0,0,1,35.5,36Zm-20-19A2.5,2.5,0,0,0,13,19.5v13A2.5,2.5,0,0,0,15.5,35h20A2.5,2.5,0,0,0,38,32.5v-13A2.5,2.5,0,0,0,35.5,17ZM22,31.5a.5.5,0,0,0-.5-.5h-5a.5.5,0,0,0,0,1h5A.5.5,0,0,0,22,31.5Zm7,0a.5.5,0,0,0-.5-.5h-5a.5.5,0,0,0,0,1h5A.5.5,0,0,0,29,31.5Zm7,0a.5.5,0,0,0-.5-.5h-5a.5.5,0,0,0,0,1h5A.5.5,0,0,0,36,31.5Zm0-11a.5.5,0,0,0-.5-.5h-2a.5.5,0,0,0,0,1h2A.5.5,0,0,0,36,20.5ZM21.5,26h-5a.5.5,0,0,1-.5-.5v-5a.5.5,0,0,1,.5-.5h5a.5.5,0,0,1,.5.5v5A.5.5,0,0,1,21.5,26ZM17,25h4V21H17Z\"><\/path><\/svg>        <div>\n          <h3>Parcele em até 12x<\/h3>\n          <p>Parcele em até 12x no cartão de crédito ou 3% off no pix<\/p>\n        <\/div>\n      <\/article>\n\n      <article>\n        <svg viewBox=\"0 0 51 51\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"M25.5,0A25.5,25.5,0,1,0,51,25.5,25.53,25.53,0,0,0,25.5,0Zm0,50A24.5,24.5,0,1,1,50,25.5,24.53,24.53,0,0,1,25.5,50ZM39.11,28.83l-1.6.58L33,16.88a.53.53,0,0,0-.26-.29.5.5,0,0,0-.38,0l-12.64,4.6-1.11-3c0-.12-.71-2.84-3-2.91-1.06,0-4.93.06-5.09.06a.51.51,0,0,0-.49.51.55.55,0,0,0,.52.49s4-.1,5-.06c1.53.05,2.06,2.12,2.08,2.2l5.12,14.08a4,4,0,1,0,4.63,1.65l12.09-4.4a.5.5,0,1,0-.34-.94ZM20,22.12,25.9,20v0l1.6,4.39a.49.49,0,0,0,.47.33.51.51,0,0,0,.17,0,.5.5,0,0,0,.3-.64l-1.6-4.39v0l5.35-1.94,4.39,12.06-9.9,3.61A4,4,0,0,0,24,32.3l-.25,0ZM24,39.3a3,3,0,1,1,3-3A3,3,0,0,1,24,39.3Z\" \/><\/svg>\n        <div>\n          <h3>Frete Gratis<\/h3>\n          <p>Para todo Brasil em compras acima de R$399,99<\/p>\n        <\/div>\n      <\/article>\n\n      <article>\n          <svg viewBox=\"0 0 51 51\"><path d=\"M25.5,39a.51.51,0,0,1-.17,0c-9.9-3.55-12.9-15.81-12.3-21.59a.51.51,0,0,1,.31-.41l12-4.93a.5.5,0,0,1,.38,0l12,4.93a.51.51,0,0,1,.31.41c.6,5.78-2.4,18-12.3,21.59A.51.51,0,0,1,25.5,39ZM14,17.78C13.56,23.36,16.42,34.59,25.5,38,34.58,34.59,37.44,23.36,37,17.78L25.5,13ZM23.72,30.4l9.84-9.76a.5.5,0,0,0-.71-.71l-9.49,9.41-4.48-4.46a.5.5,0,0,0-.7.71L23,30.4a.5.5,0,0,0,.35.15A.51.51,0,0,0,23.72,30.4ZM25.5,51A25.5,25.5,0,1,1,51,25.5,25.53,25.53,0,0,1,25.5,51Zm0-50A24.5,24.5,0,1,0,50,25.5,24.53,24.53,0,0,0,25.5,1Z\"><\/path><\/svg>        <div>\n          <h3>Compra Segura<\/h3>\n          <p>Site 100% seguro<\/p>\n        <\/div>\n      <\/article>\n\n      <article>\n        <svg viewBox=\"0 0 51 51\"><path d=\"M15,37.2a.47.47,0,0,1-.35-.15.48.48,0,0,1-.13-.48l1.63-6A12.41,12.41,0,0,1,27,12.2a12.58,12.58,0,0,1,12.5,12.4,12.49,12.49,0,0,1-18.25,11l-6.12,1.6A.27.27,0,0,1,15,37.2Zm12-24a11.4,11.4,0,0,0-9.88,17.09.46.46,0,0,1,.05.38L15.73,36l5.47-1.44a.48.48,0,0,1,.37,0A11.38,11.38,0,0,0,35.08,16.54h0A11.28,11.28,0,0,0,27,13.2Zm3.67,18.61a8.91,8.91,0,0,1-3.59-1A15.35,15.35,0,0,1,21,25.47l-.06-.09a7.09,7.09,0,0,1-1.52-3.91,4.35,4.35,0,0,1,1.29-3.18l.07-.08a1.8,1.8,0,0,1,1.3-.59h.7c.44,0,.88.11,1.21.91l.35.84c.3.74.66,1.6.72,1.73a1.14,1.14,0,0,1,0,1.05,4.66,4.66,0,0,1-.91,1.27.85.85,0,0,0-.17.2,9.35,9.35,0,0,0,4.59,3.93.4.4,0,0,0,.15.06c.33-.41.89-1.07,1.07-1.35a1,1,0,0,1,1.38-.37c.37.13,2.2,1,2.44,1.16l.15.07a1.4,1.4,0,0,1,.73.56,3.13,3.13,0,0,1-.17,2.06,4.06,4.06,0,0,1-2.76,2A5.3,5.3,0,0,1,30.69,31.81ZM22.1,18.62a.7.7,0,0,0-.61.28l-.07.07a3.34,3.34,0,0,0-1,2.5,6,6,0,0,0,1.31,3.3l.09.13a14.27,14.27,0,0,0,5.7,5c2.1.91,2.91,1,3.92.84a3.11,3.11,0,0,0,2-1.33,3.23,3.23,0,0,0,.22-1.31c0,.05-.14,0-.26-.08L33.18,28h0c-.44-.22-2.06-1-2.33-1.11a.85.85,0,0,0-.21-.06,13.31,13.31,0,0,1-1.14,1.47,1,1,0,0,1-1.36.2,10,10,0,0,1-5-4.35,1,1,0,0,1,.28-1.36,3.84,3.84,0,0,0,.73-1s0,0,0-.17-.33-.79-.74-1.79l-.35-.84a.73.73,0,0,0-.17-.29H22.1ZM25.5,51A25.5,25.5,0,1,1,51,25.5,25.53,25.53,0,0,1,25.5,51Zm0-50A24.5,24.5,0,1,0,50,25.5,24.53,24.53,0,0,0,25.5,1Z\"><\/path><\/svg>\n        <div>\n          <h3>Atendimento personalizado<\/h3>\n          <p>Tem duvidas? Só mandar mensagem em nosso WhatsApp<\/p>\n        <\/div>\n      <\/article>\n    <\/div>\n  <\/div>\n<\/section>\n\n<style>\n  \/* Desktop *\/\n  .section-informative--desktop  {\n    background: rgba(0, 0, 0, 0.1);\n    padding: 74px 0;\n  }\n\n  .section-informative--desktop .content {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\n    gap: 16px;\n  }\n\n  .section-informative--desktop article {\n    display: grid;\n    grid-template-columns: 64px 200px;\n    justify-content: center;\n    align-items: center;\n    gap: 24px 16px;\n  }\n\n  .section-informative--desktop article svg {\n    width: 64px;\n    height: 64px;\n  }\n\n  .section-informative--desktop article h3 {\n    font-size: 15px;\n    font-weight: 700;\n    margin: 4px 0 0;\n  }\n\n  .section-informative--desktop article p {\n    font-size: 13px;    \n    font-weight: normal;\n    margin: 0;\n  }\n<\/style>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "featured_collection_pcAYxH": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".title.h1 {text-align: center;}"
+      ],
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "title": "Mais Vendidos",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "link",
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "scheme-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_aFLYYT",
+    "custom_liquid_grbdP7",
+    "featured_collection_pcAYxH",
+    "banner",
+    "product-grid"
+  ]
+}
