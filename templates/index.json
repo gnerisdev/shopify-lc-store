@@ -53,11 +53,12 @@
       "type": "featured-collection",
       "custom_css": [
         ".title.h1 {text-align: center;}",
-        ".price {color: #000; font-size: 22px; font-weight: 700; letter-spacing: 0px;}"
+        ".price {color: #000; font-size: 22px; font-weight: 700; letter-spacing: 0px;}",
+        ".slider-counter {display: none !important;}"
       ],
       "name": "Mais Vendidos",
       "settings": {
-        "collection": "all",
+        "collection": "mais-vendidos",
         "products_to_show": 8,
         "title": "Mais Vendidos",
         "heading_size": "h1",
@@ -66,7 +67,7 @@
         "description_style": "body",
         "columns_desktop": 4,
         "enable_desktop_slider": true,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-1",
@@ -85,7 +86,9 @@
     "featured_collection_NxnFCF": {
       "type": "featured-collection",
       "custom_css": [
-        ".title.h1 {text-align: center;}"
+        ".title.h1 {text-align: center;}",
+        "@media(max-width: 992px) { .contains-card--product { display: grid; grid-template-columns: 1fr 1fr; gap: 24px;} }",
+        ".slider-counter {display: none !important;}"
       ],
       "name": "Lançamentos",
       "settings": {
@@ -108,7 +111,7 @@
         "show_vendor": false,
         "show_rating": false,
         "quick_add": "none",
-        "columns_mobile": "2",
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
         "padding_top": 44,
         "padding_bottom": 36
@@ -117,7 +120,8 @@
     "featured_collection_nWi8nq": {
       "type": "featured-collection",
       "custom_css": [
-        ".title.h1 {text-align: center;}"
+        ".title.h1 {text-align: center;}",
+        ".slider-counter {display: none !important;}"
       ],
       "name": "Destaques",
       "settings": {
@@ -130,7 +134,7 @@
         "description_style": "body",
         "columns_desktop": 4,
         "enable_desktop_slider": true,
-        "full_width": false,
+        "full_width": true,
         "show_view_all": false,
         "view_all_style": "solid",
         "color_scheme": "scheme-1",
@@ -159,7 +163,7 @@
         "text_mzBk7g": {
           "type": "text",
           "settings": {
-            "text": "<p>Seja bem-vindo à LC Store, um espaço moderno e acolhedor. Mergulhe em uma experiência de compras com peças exclusivas, de altíssima qualidade e muito estilo. A LC Store<strong> <\/strong>está sempre em busca de oferecer a você, cliente, a melhor experiência no atendimento presencial e online, tornando sua compra simples, segura e prazerosa. Navegue em nosso site e descubra os melhores produtos para compor seu visual com personalidade.<\/p>"
+            "text": "<p>LC Store<strong> <\/strong>está sempre em busca de oferecer a você, cliente, a melhor experiência no atendimento presencial e online, tornando sua compra simples, segura e prazerosa. Navegue em nosso site e descubra os melhores produtos para compor seu visual com personalidade.<\/p>"
           }
         }
       },

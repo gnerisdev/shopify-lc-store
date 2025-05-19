@@ -1,0 +1,193 @@
+<div class="custom-subheader">
+  <div>
+    <a href="/">Início</a>
+  </div>
+
+  <div id="button-show-products">
+    Todos os Produtos
+    <svg width="64px" height="64px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <defs> <style>.cls-1{fill:none;stroke:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style> </defs> <title></title> <g id="chevron-bottom"> <line class="cls-1" x1="16" x2="7" y1="20.5" y2="11.5"></line> <line class="cls-1" x1="25" x2="16" y1="11.5" y2="20.5"></line> </g> </g></svg>  
+  </div>
+
+  <ul id="custom-subheader__list" class="custom-subheader__list  is-hidden">
+    {% for collection in collections %}
+    <li>
+      <strong>{{ collection.title }}</strong>
+        <ul class="custom-subheader__list__products">
+          {% for product in collection.products %}
+            <li>
+              <a href="{{ product.url }}">{{ product.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="custom-subheader custom-subheader--mobile">
+  <div id="button-open-menu" style="cursor: pointer;">
+    <svg width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 17H20M4 12H20M4 7H20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>  
+  </div>
+
+  <ul class="custom-subheader--mobile__list">
+    {% for collection in collections %}
+    <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <nav class="custom-nav-mobile">
+    <div class="custom-nav-mobile__content">
+      <header>
+        <a href="">
+          {{- 'icon-instagram.svg' | inline_asset_content -}}
+        </a>
+      </header>
+      
+      <ul class="list-menu">
+        <li class="item-menu" style="cursor: pointer;">
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </li>
+
+        <li class="item-menu">
+          <a href="/">Início</a>
+        </li>
+
+        <li>
+          <details>
+            <summary>
+              Todos os produtos
+              <div class="icon">
+                <svg width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#ffffff"></path> </g></svg>
+              </div>
+            </summary>
+            <ul class="custom-nav-mobile__products">
+              {% for collection in collections %}
+                <li>
+                  <details class="details-main">
+                    <summary>
+                      {{ collection.title }}
+                      <div class="icon">
+                        <svg width="12px" height="12px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 8.29289C4.68342 7.90237 5.31658 7.90237 5.70711 8.29289L12 14.5858L18.2929 8.29289C18.6834 7.90237 19.3166 7.90237 19.7071 8.29289C20.0976 8.68342 20.0976 9.31658 19.7071 9.70711L12.7071 16.7071C12.3166 17.0976 11.6834 17.0976 11.2929 16.7071L4.29289 9.70711C3.90237 9.31658 3.90237 8.68342 4.29289 8.29289Z" fill="#ffffff"></path> </g></svg>
+                      </div>
+                    </summary>
+                    <ul>
+                      <li><a href="{{ collection.url }}"><strong>Ver tudo em {{ collection.title }}</strong></a></li>
+
+                      {% for product in collection.products %}
+                        <li><a href="{{ product.url }}">{{ product.title }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<style>
+  .custom-nav-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .2784313725);
+    color: #ffffff;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    visibility: hidden; 
+  }
+
+  .custom-nav-mobile__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #000000;
+    min-width: 200px;
+    width: 80%;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .custom-nav-mobile.active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .custom-nav-mobile.active .custom-nav-mobile__content {
+    transform: translateX(0);
+  }
+
+  .custom-nav-mobile__content header {
+    background-color: #2ecc71;
+    padding: 6px 15px;
+  }
+
+  .custom-nav-mobile__content header a {
+    display: flex;
+    color: #ffffff;
+  }
+
+  .custom-nav-mobile__content header svg {
+    height: 24px;
+  }
+
+  .custom-nav-mobile__content .list-menu li {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+  }
+
+  .custom-nav-mobile details .icon {
+    transition: transform 0.3s ease;
+  }
+
+  details.details-main[open] > summary > .icon {
+    transform: rotate(90deg);
+  }
+
+  .custom-nav-mobile__products details[open] .icon {
+    transform: rotate(90deg);
+  }
+  
+  .custom-nav-mobile__content summary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+  }
+  
+  .custom-nav-mobile__products, .custom-nav-mobile__products details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, .1);
+  }
+
+  .custom-nav-mobile__products details li,
+  .list-menu .item-menu {
+    padding: 15px;
+  }
+
+  .custom-nav-mobile__products details li a, .list-menu .item-menu a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .custom-nav-mobile__products details li a:visited {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .item-menu svg {
+    height: 14px;
+  }
+</style>

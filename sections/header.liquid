@@ -21,6 +21,10 @@
     justify-self: start;
     margin-left: -1.2rem;
   }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
 
   {%- if section.settings.sticky_header_type == 'reduce-logo-size' -%}
     .scrolled-past-header .header__heading-logo-wrapper {
@@ -137,15 +141,10 @@
     endif
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} {% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
-    {%- liquid
-      if section.settings.menu != blank
-        render 'header-drawer'
-      endif
-
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
-    -%}
+    
+    <div id="search-mobile">
+      {%- render 'header-search', input_id: 'Search-In-Modal-1' -%}
+    </div>  
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -172,7 +171,7 @@
             }}
           </div>
         {%- else -%}
-          <span class="h2">{{ shop.name }}</span>
+          <img src="{{ 'logo-lc.svg' |  asset_url   }}" class="custom-header__logo">
         {%- endif -%}
       </a>
       {%- if request.page_type == 'index' -%}
@@ -224,7 +223,7 @@
     {%- endif -%}
 
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
-      <div class="desktop-localization-wrapper">
+      {% comment %} <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <localization-form class="small-hide medium-hide" data-prevent-hide>
             {%- form 'localization', id: 'HeaderCountryForm', class: 'localization-form' -%}
@@ -246,64 +245,39 @@
             {%- endform -%}
           </localization-form>
         {%- endif -%}
-      </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      </div> {% endcomment %}
 
-      {%- if shop.customer_accounts_enabled -%}
-        <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}"
-          rel="nofollow"
-        >
-          {%- if section.settings.enable_customer_avatar -%}
-            <account-icon>
-              {%- if customer and customer.has_avatar? -%}
-                {{ customer | avatar }}
-              {%- else -%}
-                <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-              {%- endif -%}
-            </account-icon>
-          {%- else -%}
-            <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
-          {%- endif -%}
-          <span class="visually-hidden">
-            {%- liquid
-              if customer
-                echo 'customer.account_fallback' | t
-              else
-                echo 'customer.log_in' | t
-              endif
-            -%}
-          </span>
-        </a>
-      {%- endif -%}
+      {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
+      {% render 'custom-header-search', input_id: 'Search-In-Modal' %}
 
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when '@app' -%}
-            {% render block %}
-        {%- endcase -%}
-      {%- endfor -%}
+      <a
+        href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+        class="header__icon header__icon--chat link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %} custom-header__icon"
+        rel="nofollow"
+      >
+        <span class="svg-wrapper">{{ 'icon-chat.svg' | inline_asset_content }}</span>
+        Atendimento
+      </a>
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {% if cart == empty %}
-          <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
-        {% else %}
-          <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
-        {% endif %}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
+      <a
+        href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+        class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %} custom-header__icon"
+        rel="nofollow"
+      >
+        <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+        Minha conta
+      </a>
+
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset custom-header__icon" id="cart-icon-bubble">
+        <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
+        <span class="cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+        <span class="text">Meu carrinho</span>
       </a>
     </div>
   </header>
 </{{ header_tag }}>
+
+{% render 'custom-subheader' %}
 
 {%- if settings.cart_type == 'notification' -%}
   {%- render 'cart-notification',

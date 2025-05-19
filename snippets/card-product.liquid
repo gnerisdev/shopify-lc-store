@@ -40,7 +40,7 @@
       assign ratio = 1
     endif
   -%}
-  <div class="card-wrapper product-card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper custom-product-card-wrapper underline-links-hover">
     <div
       class="
         card card--{{ settings.card_style }}
@@ -286,6 +286,10 @@
                 </quantity-popover>
               {% endif %}
             {%- endif -%}
+
+            <div class="custom-buttons">
+              <button class="custom-button-buy">COMPRAR</button>
+            </div>
           </div>
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}

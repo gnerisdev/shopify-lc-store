@@ -2532,7 +2532,7 @@ input[type='checkbox'] {
 }
 
 .header__icon .svg-wrapper {
-  width: 44px;
+  width: auto;
   height: 44px;
 }
 
@@ -2555,7 +2555,7 @@ input[type='checkbox'] {
 .header__icon,
 .header__icon--cart .icon {
   height: 4.4rem;
-  width: 4.4rem;
+  width: fit-content;
   padding: 0;
 }
 
