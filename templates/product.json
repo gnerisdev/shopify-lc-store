@@ -84,9 +84,12 @@
     },
     "related-products": {
       "type": "related-products",
+      "custom_css": [
+        "h2 {text-align: center; margin: 4rem 0 0;}"
+      ],
       "settings": {
         "heading": "You may also like",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -96,7 +99,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 28
       }
     }
