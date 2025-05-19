@@ -85,7 +85,7 @@
     "related-products": {
       "type": "related-products",
       "custom_css": [
-        "h2 {text-align: center; margin: 4rem 0 0;}"
+        "h2 {text-align: center; margin: 80px 0 0;}"
       ],
       "settings": {
         "heading": "You may also like",
