@@ -61,10 +61,10 @@
         "description"
       ],
       "custom_css": [
-        ".product--thumbnail_slider {display: grid; grid-template-columns: 55% 45%;}",
+        ".product--thumbnail_slider {display: grid; grid-template-columns: 60% 40%;}",
         ".product--large:not(.product--no-media) .product__info-wrapper {width: 100%; max-width: 100%;}",
         ".product--large:not(.product--no-media) .product__media-wrapper {width: 100%; max-width: 100%;}",
-        " .product:not(.product--columns) .product__media-list .product__media-item:first-child, .product:not(.product--columns) .product__media-list .product__media-item--full {width: 100%; max-width: 100% !important; }"
+        ".product:not(.product--columns) .product__media-list .product__media-item:first-child,.product:not(.product--columns) .product__media-list .product__media-item--full {width: 100%; max-width: 100% !important;}"
       ],
       "settings": {
         "enable_sticky_info": true,
