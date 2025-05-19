@@ -62,7 +62,8 @@
       ],
       "custom_css": [
         ".product--thumbnail_slider {display: grid; grid-template-columns: 55% 45%;}",
-        ".product--large:not(.product--no-media) .product__info-wrapper {width: 100%; max-width: 100%;}"
+        ".product--large:not(.product--no-media) .product__info-wrapper {width: 100%; max-width: 100%;}",
+        ".product--large:not(.product--no-media) .product__media-wrapper {width: 100%; max-width: 100%; }"
       ],
       "settings": {
         "enable_sticky_info": true,
