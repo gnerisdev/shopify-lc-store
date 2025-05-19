@@ -60,6 +60,10 @@
         "buy_buttons",
         "description"
       ],
+      "custom_css": [
+        ".product--thumbnail_slider {display: grid; grid-template-columns: 1fr 1fr;}",
+        ".product--large:not(.product--no-media) .product__info-wrapper {width: 100%; max-width: 100%;}"
+      ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
