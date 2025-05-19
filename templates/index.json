@@ -64,7 +64,7 @@
       "type": "featured-collection",
       "custom_css": [
         ".title.h1 {text-align: center;}",
-        "@media (max-width: 992px) {.contains-card--product {display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }}",
+        "@media (max-width: 992px) {.contains-card--product {display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }}",
         ".slider-counter {display: none !important;}"
       ],
       "name": "Lançamentos",
