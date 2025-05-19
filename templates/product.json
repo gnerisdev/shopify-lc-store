@@ -73,7 +73,7 @@
         "constrain_to_viewport": true,
         "media_fit": "cover",
         "gallery_layout": "columns",
-        "mobile_thumbnails": "show",
+        "mobile_thumbnails": "columns",
         "media_position": "left",
         "image_zoom": "lightbox",
         "hide_variants": true,
