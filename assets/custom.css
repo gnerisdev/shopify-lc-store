@@ -113,6 +113,12 @@ body {
   height: 20px !important;
   width: 20px;
 }
+@media (max-width: 768px) {
+  .cart-count {
+    right: -9px;
+    top: -1px;
+  }
+}
 
 /* SubHeader */
 .custom-subheader {
@@ -141,6 +147,7 @@ body {
   display: flex;
   align-items: center;
   gap: 4px;
+  cursor: pointer;
 }
 
 #button-show-products svg {

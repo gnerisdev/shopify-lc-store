@@ -38,13 +38,8 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
@@ -54,30 +49,39 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "share"
+        "description"
+      ],
+      "custom_css": [
+        ".product--thumbnail_slider {display: grid; grid-template-columns: 55% 45%;}",
+        ".product__media-wrapper,.product__info-wrapper {width: 100%; max-width: 100%;}",
+        ".product--large:not(.product--no-media) .product__media-wrapper {width: 100%; max-width: 100%;}",
+        ".product:not(.product--columns) .product__media-list .product__media-item:first-child,.product:not(.product--columns) .product__media-list .product__media-item--full {width: 100%; max-width: 100% !important;}",
+        ".product__title h1 {font-size: 2.5rem; font-weight: bold;}"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "large",
         "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "media_fit": "cover",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 28,
         "padding_bottom": 12
       }
     },
     "related-products": {
       "type": "related-products",
+      "custom_css": [
+        "h2 {text-align: center; margin: 80px 0 0;}"
+      ],
       "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
+        "heading": "Produtos relacionados",
+        "heading_size": "h1",
         "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
@@ -87,7 +91,7 @@
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
-        "padding_top": 36,
+        "padding_top": 12,
         "padding_bottom": 28
       }
     }
