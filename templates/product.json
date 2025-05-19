@@ -61,7 +61,7 @@
         "description"
       ],
       "custom_css": [
-        ".product--thumbnail_slider {display: grid; grid-template-columns: 1fr 1fr;}",
+        ".product--thumbnail_slider {display: grid; grid-template-columns: 55% 45%;}",
         ".product--large:not(.product--no-media) .product__info-wrapper {width: 100%; max-width: 100%;}"
       ],
       "settings": {
