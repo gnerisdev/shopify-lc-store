@@ -107,6 +107,28 @@
           </div>
         {%- endif -%}
         <div class="card__content">
+          <div class="card_quick-purchase">
+            <form method="post" action="/cart/add" id="product-form-{{ product.id }}">
+              <label for="option-{{ option_index }}-{{ product.id }}">Opções</label>
+              <select id="option-{{ option_index }}-{{ product.id }}" data-index="option{{ option_index | plus: 1 }}">
+                {% for variant in card_product.variants %}
+                <option value="{{ value }}">{{ variant.title }}</option>
+                {% endfor %}
+              </select>
+
+              <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+              <button class="custom-button-buy">COMPRAR</button>
+              
+              <button type="button" class="custom-button-close">
+                {{- 'icon-circle-close.svg' | inline_asset_content -}}
+              </button>
+            </form>
+          </div>
+
+          {% comment %} <script>
+            console.log({{ card_product|  json }})
+          </script>
+             {% endcomment %}
           <div class="card__information">
             <h3
               class="card__heading"
@@ -286,10 +308,6 @@
                 </quantity-popover>
               {% endif %}
             {%- endif -%}
-
-            <div class="custom-buttons">
-              <button class="custom-button-buy">COMPRAR</button>
-            </div>
           </div>
         </div>
         {% assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id %}
@@ -569,6 +587,14 @@
             </span>
           {%- endif -%}
         </div>
+      </div>
+
+      <div class="custom-buttons">
+        <button class="custom-button-buy" type="button">COMPRAR</button>
+        <a href="http://" class="custom-button-view" type="button">
+          {{- 'icon-eye.svg' | inline_asset_content -}}
+          ESPIAR
+        </a>
       </div>
     </div>
   </div>

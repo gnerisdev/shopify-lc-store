@@ -24,17 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Menu mobile - Subheader
   const openMenuButton = document.getElementById('button-open-menu');
   const navMobile = document.querySelector('.custom-nav-mobile');
-  const closeMenuButton = navMobile.querySelector('.item-menu'); // Primeiro item é o botão de fechar
+  const closeMenuButton = navMobile.querySelector('.item-menu'); 
 
-  openMenuButton.addEventListener('click', function () {
-    navMobile.classList.add('active');
-  });
+  openMenuButton.addEventListener('click', () => navMobile.classList.add('active'));
+  closeMenuButton.addEventListener('click', () => navMobile.classList.remove('active'));
 
-  closeMenuButton.addEventListener('click', function () {
-    navMobile.classList.remove('active');
-  });
-
-  // Seleciona todos os elementos que correspondem ao seletor
   const items = document.querySelectorAll('li.grid__item');
 
   if (items.length > 0) {
@@ -42,4 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomItem = items[randomIndex];
     randomItem.style.padding = '0 8px'; 
   }
+
+  // Slide
+  new Swiper('.featured-slide', {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    breakpoints: { 
+      0: { slidesPerView: 2 }, 
+      578: { slidesPerView: 2 },
+      768: { slidesPerView: 3 },
+      1100: { slidesPerView: 4 },
+    }
+  });
 });
