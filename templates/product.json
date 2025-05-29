@@ -89,8 +89,8 @@
         "h2 {text-align: center; margin: 80px 0 0;}"
       ],
       "settings": {
-        "heading": "Produtos relacionados",
-        "heading_size": "h1",
+        "heading": "<strong>Produtos relacionados</strong>",
+        "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
         "columns_mobile": "2",
