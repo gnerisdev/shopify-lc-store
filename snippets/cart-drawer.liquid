@@ -542,29 +542,18 @@
         <!-- CTAs -->
 
         <div class="cart__ctas" {{ block.shopify_attributes }}>
-          <button
-            type="submit"
-            id="CartDrawer-Checkout"
-            class="cart__checkout-button button"
-            name="checkout"
-            form="CartDrawer-Form"
-            {% if cart == empty %}
-              disabled
-            {% endif %}
-            onclick='JavaScript:timedRedirect()'
-          
-          >
-            Comprar
-          </button>
+      <button 
+                type="button" 
+                onclick="getNewCheckoutURL()" 
+                id="yampiPurchaseConfirmationButton" 
+                class="yampi_purchase_confirmation_btn button button--full-width button--primary"
+                                        
+              >
+                Comprar
+              </button>
         </div>
       </div>
     </div>
   </div>
-  <script>
-redirectTime = "500";
-redirectURL = "/cart";
-function timedRedirect() {
-	setTimeout("location.href = redirectURL;",redirectTime);
-}
-</script>
+
 </cart-drawer>
